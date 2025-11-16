@@ -1,12 +1,18 @@
 import axios from 'axios';
 
+// Usar variable de entorno, fallback a localhost para desarrollo
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+
+console.log('🔧 API URL:', API_URL);
+console.log('🌍 Environment:', import.meta.env.MODE);
+
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: API_URL,
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json'
   },
-  withCredentials: false // Importante
+  withCredentials: false
 });
 
 api.interceptors.request.use(
