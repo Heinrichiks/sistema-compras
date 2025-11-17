@@ -19,15 +19,6 @@ const app = express();
 // ===== NUEVO: Trust proxy para Railway =====
 app.set('trust proxy', 1);
 
-// ===== NUEVO: Debug de variables de entorno =====
-console.log('🔍 DEBUG Variables:');
-console.log('NODE_ENV:', process.env.NODE_ENV);
-console.log('PORT:', process.env.PORT);
-console.log('MONGODB_URI existe?', !!process.env.MONGODB_URI);
-console.log('MONGODB_URI primeros 20 chars:', process.env.MONGODB_URI?.substring(0, 20));
-console.log('JWT_SECRET existe?', !!process.env.JWT_SECRET);
-console.log('==================');
-
 // CORS - Configuración para producción
 const allowedOrigins = [
   'http://localhost:5173',
