@@ -75,10 +75,12 @@ app.get('/health', (req, res) => {
 // Middleware de manejo de errores
 app.use(errorHandler);
 
-// Función para conectar a MongoDB
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGODB_URI);
+    await mongoose.connect(process.env.MONGODB_URI, {
+      serverSelectionTimeoutMS: 30000,
+      socketTimeoutMS: 45000,
+    });
     console.log('✅ Conectado a MongoDB');
   } catch (error) {
     console.error('❌ Error al conectar a MongoDB:', error.message);
