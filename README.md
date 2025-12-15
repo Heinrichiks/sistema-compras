@@ -1,17 +1,120 @@
-# React + Vite
+# Sistema de Compras
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sistema de gestión de compras, cotizaciones y proveedores desarrollado con React (frontend) y Express + MongoDB (backend).
 
-Currently, two official plugins are available:
+## 🚀 Inicio Rápido - Desarrollo Local
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Opción 1: Script Automático (Recomendado)
 
-## React Compiler
+**Linux/Mac:**
+```bash
+./start-local.sh
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Windows:**
+```bash
+start-local.bat
+```
 
-## Expanding the ESLint configuration
+### Opción 2: Manual
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# sistema-compras" 
+**Terminal 1 - Backend:**
+```bash
+cd backend
+npm install
+npm run dev
+```
+
+**Terminal 2 - Frontend:**
+```bash
+npm install
+npm run dev
+```
+
+### Acceder a la Aplicación
+
+- **Frontend**: http://localhost:5173
+- **Backend**: http://localhost:5000
+- **Health Check**: http://localhost:5000/health
+
+## 📚 Documentación Completa
+
+Para instrucciones detalladas de configuración local, incluyendo:
+- Instalación de MongoDB
+- Configuración de variables de entorno
+- Solución de problemas
+- Scripts disponibles
+
+👉 **Ver [LOCAL-SETUP.md](./LOCAL-SETUP.md)**
+
+## 🛠️ Tecnologías
+
+### Frontend
+- React 19
+- Vite
+- React Router Dom
+- Axios
+- Lucide React (iconos)
+
+### Backend
+- Node.js + Express
+- MongoDB + Mongoose
+- JWT para autenticación
+- bcryptjs para encriptación
+- CORS, Helmet, Rate Limiting
+
+## 📋 Requisitos
+
+- Node.js >= 18.0.0
+- MongoDB >= 6.0
+- npm
+
+## 🔒 Variables de Entorno
+
+El archivo `backend/.env` ya está configurado para desarrollo local. Para producción, configura estas variables:
+
+```env
+PORT=5000
+NODE_ENV=production
+MONGODB_URI=tu_uri_de_mongodb
+JWT_SECRET=tu_secreto_seguro
+JWT_EXPIRE=7d
+```
+
+## 📁 Estructura del Proyecto
+
+```
+sistema-compras/
+├── backend/              # Backend Express
+│   ├── src/
+│   │   ├── controllers/  # Controladores
+│   │   ├── models/       # Modelos MongoDB
+│   │   ├── routes/       # Rutas API
+│   │   ├── middleware/   # Middleware
+│   │   └── server.js     # Servidor principal
+│   ├── .env              # Variables de entorno
+│   └── package.json
+├── src/                  # Frontend React
+│   ├── components/       # Componentes React
+│   ├── pages/            # Páginas
+│   └── ...
+├── start-local.sh        # Script inicio Linux/Mac
+├── start-local.bat       # Script inicio Windows
+└── LOCAL-SETUP.md        # Guía completa setup
+```
+
+## 🤝 Contribuir
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## 📝 Licencia
+
+MIT
+
+---
+
+**Desarrollado por Gustavo** 
