@@ -12,8 +12,8 @@ Antes de comenzar, asegúrate de tener instalado:
 
 2. **MongoDB** (versión 6 o superior)
    - Verificar: `mongod --version`
-   - Descargar: https://www.mongodb.com/try/download/community
-   - **Alternativa con Docker**: `docker run -d -p 27017:27017 --name mongodb mongo:latest`
+   - **📖 Guía completa de instalación**: Ver [MONGODB-INSTALL.md](./MONGODB-INSTALL.md)
+   - **Alternativa rápida con Docker**: `docker run -d -p 27017:27017 --name mongodb mongo:latest`
 
 3. **npm** (viene con Node.js)
    - Verificar: `npm --version`

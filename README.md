@@ -39,13 +39,15 @@ npm run dev
 
 ## 📚 Documentación Completa
 
-Para instrucciones detalladas de configuración local, incluyendo:
-- Instalación de MongoDB
+**Guías disponibles:**
+- 📘 [LOCAL-SETUP.md](./LOCAL-SETUP.md) - Configuración completa paso a paso
+- 🗄️ [MONGODB-INSTALL.md](./MONGODB-INSTALL.md) - Instalación de MongoDB (Windows/Mac/Linux)
+
+Incluye:
+- Instalación de MongoDB local
 - Configuración de variables de entorno
 - Solución de problemas
 - Scripts disponibles
-
-👉 **Ver [LOCAL-SETUP.md](./LOCAL-SETUP.md)**
 
 ## 🛠️ Tecnologías
 
@@ -100,7 +102,8 @@ sistema-compras/
 │   └── ...
 ├── start-local.sh        # Script inicio Linux/Mac
 ├── start-local.bat       # Script inicio Windows
-└── LOCAL-SETUP.md        # Guía completa setup
+├── LOCAL-SETUP.md        # Guía completa setup
+└── MONGODB-INSTALL.md    # Guía instalación MongoDB
 ```
 
 ## 🤝 Contribuir
